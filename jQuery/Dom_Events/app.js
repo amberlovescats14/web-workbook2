@@ -1,9 +1,4 @@
-// when the document is done loading, run the script inside
-$(function(){
-  $('.box').draggable({
-    helper:'clone'
-  });
-  $('document').droppable();
+$(function() {
   // alert('Are you ready to count by ones, tens, and hundred?')
   var num = 1;
   var numOne = 1
@@ -12,35 +7,24 @@ $(function(){
   $('.box').on('click', function(){
     num++ ;
     if (num <= 10)
-      $('#counter-by10').text(num * 10)
+      $('#counter-by10').text(num * 10);
     if (num <= 100)
       $('#counter-by100').text(num * 100);
   })
   $('button').on('click', function(){
-    $('#counter-1').text(numOne++)
-    $('#counter-10').text(numTwo++)
-    $('#counter-100').text(numThree++)
+    $('#counter-1').text(numOne++);
+    $('#counter-10').text(numTwo++);
+    $('#counter-100').text(numThree++);
     if (num <= 10)
       $('#counter-by10').text(numOne++ * 10)
     if(num <= 100)
       $('#counter-by100').text(numOne++ * 100)
   })
-  
+  $('.box').draggable({
+    helper:'clone'
+  })
+  $('document').droppable()
 })
-// $(document).ready(function() {
-//   var num = 0;
-//   $('.box').click(function() {
-//     num++;
-//     if (num <= 10)
-//     $('#counter-by10').text(num * 10);
-//     if (num <= 100)
-//       $('#counter-by100').text(num * 100);
-//   })
-//  $('button').onclick(function() {
-//     $('button').slideUp(300)
-    
-//     }
-// }) ;
 
 // When the user clicks on the '10' box, a separate counter counts up by 10.
 // When the user clicks on the '100' box, a separate counter counts up by 100.

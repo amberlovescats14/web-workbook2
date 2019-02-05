@@ -19,10 +19,9 @@ body {
 }
 button {
   background: red;
-  height: 100px;
-  width: 100px;
+  height: auto;
+  width: auto;
   border: 2px solid blue;
-  border-radius: 50%;
   color: white;
   font-weight: 900;
   font-size: 5vh
